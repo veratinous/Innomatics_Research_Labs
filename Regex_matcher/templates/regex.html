@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/regex.css') }}"
+    />
+</head>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/regex">Regex</a></li>
+            <li><a href="/email">Email</a></li>
+        </ul>
+    </nav>
+</header>
+<center>
+<body>  
+    <div class="regexform">
+    <form action="/regex", method="POST">
+        <textarea class="wide" name="string" rows="5" cols="40"
+                    placeholder="Write your test string here"></textarea>
+        <br> <br>
+        <textarea class="wide" name="pattern" rows="2" cols="40"
+                    placeholder="Write your regular expression here"></textarea>
+        </br>
+        <br>
+        <button>Submit</button>
+    </form>
+    </div>
+</center>
+<div class="results">
+{% if pattern %}
+{% if results %}
+        <h2>Results found</h2>
+        {% for result in results %}
+        <ul>
+        <li>{{ result }}</li>
+        </ul>
+        {% endfor %}
+        <p>You found {{num_match}} match(s)</p>
+        {% else %}
+        <h4>No Match found...</h4>
+        {% endif %}
+{% endif %}
+</div>
+</body>
+
+</html>

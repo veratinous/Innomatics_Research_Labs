@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/home.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/regex">Regex</a></li>
+          <li><a href="/email">Email</a></li>
+        </ul>
+      </nav>
+    </header>
+    <center>
+      <p><em>WELCOME TO THE REGEX MATCHER AND EMAIL VALIDATOR APP</em></p>
+      <div class="buttons">
+        <div>
+          <a href="{{ url_for('regex') }}">
+            <button>Regex Matcher</button>
+          </a>
+        </div>
+
+        <div>
+          <a href="{{ url_for('email') }}"><button>Email Validator</button></a>
+        </div>
+        
+      </div>
+    </center>
+  </body>
+</html>
