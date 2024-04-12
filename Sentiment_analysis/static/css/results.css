@@ -1,61 +1,49 @@
-ul {
-    margin:0;
-     
- }
- .navbar {
-     background-color: #00000000;
-     padding-top: 20px;
-     
- }
- 
- .navbar ul {
-     overflow: auto;
- }
- 
- .navbar li {
-     float: left;
-     list-style: none;
-     margin: 13px 20px;
- }
- 
- .navbar li a {
-     padding: 3px 3px;
-     text-decoration: none;
-     color: rgb(255, 255, 255);
- }
- 
- 
- 
- button {
-     border: 2px solid rgb(255, 255, 255);
-     background-color: #01010100;
-     border-radius: 5px;
-     color: white;
-     padding: 8px 18px;
- }
- body{ background-image: url('/static/img/r4.PNG');
+.content{
+    margin-top: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: rgba(44, 43, 43, 0.675);
+max-width:600px;
+    z-index: 10;
+position: relative;
+}
+body{
+    background-image: url('/static/img/img2.jpg');
     background-repeat: no-repeat;
-  background-size:cover;
-    
- padding:70;
- 
- height: 100vh;
- }
- 
- .body{
-     display: flex;
-     width: 20%;
-     align-items: center;
-     height: 100vh; 
- }
-.regexform{
-   margin-top: 100px; 
- }
- .wide{
-    width: 70%;
- }
- 
- .results{
-    padding-left: 230px;
+    background-size: cover;
+    margin: 0;
+    height: 83vh;
+    font-size: large;
+}
+body::before{
+       content: "";
+       background-color:rgba(0, 0, 0, 0.942);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 10;
+}
+h1{
     color: white;
- }
+}
+h5{
+    margin-bottom: 10px;
+color: white;
+font-weight: 100;
+
+}
+.button{
+margin-top: 10px;
+color: rgb(255, 255,255);
+background-color: rgba(240,248,255, 0);
+border-width: 1px;
+border-color: rgb(255, 255, 255);
+border-radius: 3px;
+padding: 5px;
+}
+
+#review{
+    max-width: 90%;
+}
